@@ -24,7 +24,7 @@ public class Resigters extends JFrame implements ActionListener {
     JButton btnsave,btnrefresh,btnupdate,btndelete,btnexit,btnlogout;
     float price []={0,80,120,90,140,79,50};
     public Resigters(){
-        ibtittle = new JLabel("Fitness Register");
+        ibtittle = new JLabel("Membership");
         ibtittle.setBounds(230,10,300,50);
         ibtittle.setFont(new Font("",Font.BOLD,34));
         add(ibtittle);
@@ -60,11 +60,11 @@ public class Resigters extends JFrame implements ActionListener {
         ButtonGroup bg = new ButtonGroup () ;
         bg.add (rbmale) ;
         bg. add (rbfemale);
-        ibsubject = new JLabel ("Subject") ;
+        ibsubject = new JLabel ("Package") ;
         ibsubject.setBounds(100, 290, 100, 40) ;
         ibsubject.setFont(new Font ("", Font.BOLD, 18));
         add (ibsubject);
-        String col[]={"Select the courses. ", "Training without Trainer ", "Training with Trainer", "Yoga Training", "Yoga Training with Trainer", "Training without Machine"};
+        String col[]={"Select the course. ", "Training without Trainer ", "Training with Trainer", "Yoga Training", "Yoga Training with Trainer", "Training without Machine"};
         cbsubject = new JComboBox (col) ;
         cbsubject.setBounds (200, 290, 300, 40) ;
         cbsubject.setFont (new Font ("", Font.BOLD,18));
@@ -78,7 +78,7 @@ public class Resigters extends JFrame implements ActionListener {
         cbtime.setBounds (200, 360, 300, 40);
         cbtime.setFont(new Font ("", Font.BOLD, 18)) ;
         add (cbtime) ;
-        String col2[]={"ID", "Name", "Gender", "Training manner", "Payment","Time"};
+        String col2[]={"ID", "Name", "Gender", "Training course", "Payment","Time"};
         model = new DefaultTableModel() ;
         model.setColumnIdentifiers(col2);
         tbtable = new JTable () ;
@@ -89,7 +89,7 @@ public class Resigters extends JFrame implements ActionListener {
         btnsave = new JButton ("Save") ;
         btnsave.setBounds (30, 680, 100, 35) ;
         add (btnsave);
-        btnrefresh = new JButton ("Retresh") ;
+        btnrefresh = new JButton ("Refresh") ;
         btnrefresh.setBounds(160, 680, 100, 35) ;
         add (btnrefresh);
         btnupdate = new JButton ("Update");
